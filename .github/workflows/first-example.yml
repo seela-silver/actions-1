@@ -6,6 +6,9 @@ jobs:
     first_job: 
         runs-on: ubuntu-latest
         steps: 
+            - name: checkout repo
+              run : actions/checkout@v4
+              
             - name: welcome-message
               run: echo "my first github actions job"
 
@@ -14,4 +17,3 @@ jobs:
 
             - name: read file
               run: cat README.md
-              
